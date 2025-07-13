@@ -210,5 +210,5 @@ test.py
 # Ignore everything in models folder
 backend/models/*
 
-# Keep the folder and Threat.pkl
+# Keep the folder
 !backend/models/
