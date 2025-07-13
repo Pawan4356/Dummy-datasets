@@ -212,4 +212,3 @@ backend/models/*
 
 # Keep the folder and Threat.pkl
 !backend/models/
-backend/models/model.onnx
