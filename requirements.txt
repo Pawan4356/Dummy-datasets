@@ -1,0 +1,12 @@
+fastapi==0.104.1
+joblib==1.5.1
+numpy==2.3.1
+onnxruntime==1.22.1
+pandas==2.3.1
+python-dateutil==2.8.2
+requests==2.31.0
+requests-oauthlib==2.0.0
+scikit-learn==1.7.0
+torch==2.7.1
+transformers==4.53.2
+uvicorn==0.23.2
