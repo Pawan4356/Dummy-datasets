@@ -207,8 +207,4 @@ marimo/_lsp/
 __marimo__/
 
 test.py
-# Ignore everything in models folder
-backend/models/*
-
-# Keep the folder
-!backend/models/
+model.onnx
