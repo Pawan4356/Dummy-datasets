@@ -1,22 +1,17 @@
-from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
+from fastapi import FastAPI
 from server.routes.api import router as api_router
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI()
+app = FastAPI(
+    title="SafeSpace API",
+    description="Real-time safety intelligence API",
+    version="1.0.0"
+)
+
+# Include API routes
 app.include_router(api_router)
 
-# Mount static files so '/static/...' works
-app.mount("/static", StaticFiles(directory="static"), name="static")
-
-templates = Jinja2Templates(directory="templates")
-
-@app.get("/", response_class=HTMLResponse)
-async def home(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
-
+# CORS middleware for frontend communication
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],  # React dev server
@@ -24,3 +19,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+async def root():
+    return {
+        "message": "SafeSpace API is running",
+        "version": "1.0.0",
+        "docs": "/docs"
+    }
