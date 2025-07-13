@@ -30,10 +30,10 @@ Safety Advice:
         result = response.json()
         if "choices" in result and result["choices"]:
             reply = result["choices"][0]["message"]["content"].strip()
-            print("OpenRouter Response:", result)
+            # print("OpenRouter Response:", result)
             return reply
         else:
-            print("Unexpected response format:", result)
+            # print("Unexpected response format:", result)
             return "No advice available."
 
     except Exception as e:
