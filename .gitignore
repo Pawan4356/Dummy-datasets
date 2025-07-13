@@ -207,11 +207,8 @@ marimo/_lsp/
 __marimo__/
 
 test.py
-# Ignore everything in the models folder
-models/*
+# Ignore everything in models folder
+backend/models/*
 
-# But keep the folder itself
-!models/.gitkeep
-
-# Optional: keep specific files like model.onnx or threat.pkl
-!models/threat.pkl
+# Keep the folder and Threat.pkl
+!backend/models/
