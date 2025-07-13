@@ -93,7 +93,7 @@ npm start
 ## 🔧 Configuration
 
 ### API Keys Setup
-The application uses several APIs that require keys:
+The application uses several APIs that require key:
 
 1. **NewsAPI**: For fetching real-time news data
 2. **OpenRouter**: For AI-generated safety advice
@@ -193,7 +193,7 @@ SafeSpace/
 ✅ **Dark/Light Mode** - Theme switching  
 ✅ **Responsive Design** - Mobile-friendly interface  
 ✅ **Real-time Data** - Live threat updates  
-✅ **Location Detection** - Automatic user location  
+✅ **Location Detection** - Automatic user location 
 ✅ **Search Functionality** - City-based filtering  
 ✅ **Modern UI/UX** - Beautiful, intuitive interface  
 
